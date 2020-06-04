@@ -11,4 +11,4 @@ export VNC_PORT="5901"
 export VNC_PW=$(whoami)
 export VNC_RESOLUTION=1024x768
 export VNC_VIEW_ONLY=false
-export VNC_STARTUPDIR=~/vnc_startup
+export VNC_STARTUPDIR=~/.vnc_startup

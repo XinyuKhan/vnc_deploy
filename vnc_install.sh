@@ -5,7 +5,7 @@ source vnc_env.sh
 cp -rf vnc_resources /tmp/
 
 
-# apt-get update
+apt-get update
 apt-get install -y \
         inetutils-ping \
         lsb-release \
@@ -27,7 +27,7 @@ cd - ; \
 
 
 
-# apt-get update
+apt-get update
 apt-get install -y \
         mousepad \
         locales \
@@ -46,8 +46,7 @@ cat /tmp/vnc_resources/tigervnc-1.10.1.x86_64.tar.gz | tar xz --strip 1 -C /
 echo "->>>>> NO_VNC_HOME = ${NO_VNC_HOME}"
 
 # apt-get update
-apt-get install -y \
-        python-numpy gettext \
+apt-get install -y gettext-base \
     && mkdir -p ${NO_VNC_HOME}/utils/websockify \
     && cat /tmp/vnc_resources/noVNC-1.1.0.tar.gz | tar xz --strip 1 -C ${NO_VNC_HOME} \
     && cat /tmp/vnc_resources/websockify-0.9.0.tar.gz | tar xz --strip 1 -C ${NO_VNC_HOME}/utils/websockify \
@@ -74,8 +73,10 @@ CALL_USER=${SUDO_USER:-${USER}}
 cd $HOME
 echo $HOME
 mkdir -p ./.config/xfce4/xfconf/
+mkdir -p ./.vnc_startup/
 cp -rf /tmp/vnc_resources/home/Desktop ./
 chown -R $CALL_USER ./Desktop
+chown -R $CALL_USER ./.vnc_startup
 cp -rf /tmp/vnc_resources/home/config/xfce4/panel ./.config/xfce4/
 cp -rf /tmp/vnc_resources/home/config/xfce4/xfconf/xfce-perchannel-xml ./.config/xfce4/xfconf/
 chown -R $CALL_USER ./.config/xfce4
