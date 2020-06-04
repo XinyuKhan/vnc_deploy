@@ -1,0 +1,14 @@
+export LANG='en_US.UTF-8'
+export LANGUAGE='en_US:en'
+export LC_ALL='en_US.UTF-8'
+export NO_VNC_HOME=/usr/share/usr/local/share/noVNCdim
+export DISPLAY=:1
+export NO_VNC_PORT="6901"
+export VNC_BLACKLIST_THRESHOLD=20
+export VNC_BLACKLIST_TIMEOUT=0
+export VNC_COL_DEPTH=24
+export VNC_PORT="5901"
+export VNC_PW=$(whoami)
+export VNC_RESOLUTION=1024x768
+export VNC_VIEW_ONLY=false
+export VNC_STARTUPDIR=~/vnc_startup
