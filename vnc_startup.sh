@@ -6,6 +6,10 @@ source vnc_env.sh
 
 VNC_IP=$(hostname -i)
 
+
+echo "Switch to ${HOME}"
+cd ${HOME}
+
 mkdir -p "${HOME}"/.vnc
 PASSWD_PATH="${HOME}/.vnc/passwd"
 
