@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "->>>>>>>>>> VNC Stop <<<<<<<<<<"
+
 source vnc_env.sh
 
 

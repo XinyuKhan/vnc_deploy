@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "->>>>>>>>>> VNC Startup <<<<<<<<<<"
+
 source vnc_env.sh
 
 VNC_IP=$(hostname -i)

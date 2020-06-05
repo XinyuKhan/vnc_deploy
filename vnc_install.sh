@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# only run as root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+echo "->>>>>>>>>> VNC Install <<<<<<<<<<"
+
 source vnc_env.sh
 
 cp -rf vnc_resources /tmp/
