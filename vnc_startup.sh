@@ -25,7 +25,7 @@ PID_SUB=$!
 echo "Starting VNC server ..."
 echo "... remove old VNC locks to be a reattachable service"
 vncserver -kill ${DISPLAY} &> "${VNC_STARTUPDIR}"/vnc_startup.log \
-    || rm -rfv /tmp/.X*-lock &> "${VNC_STARTUPDIR}"/vnc_startup.log \
+    || rm -rfv /tmp/.X*-lock /tmp/.X11-unix/* &> "${VNC_STARTUPDIR}"/vnc_startup.log \
     || echo "... no locks present"
 
 echo "... VNC params: VNC_COL_DEPTH=${VNC_COL_DEPTH}, VNC_RESOLUTION=${VNC_RESOLUTION}"
